@@ -119,7 +119,7 @@ namespace jsonServerMSTest
             Employee dataResponse = JsonConvert.DeserializeObject<Employee>(response.Content);
             //asserting for salary
             Assert.AreEqual(dataResponse.salary, "555000");
-            //writing content without deserializing from resopnse.
+            //writing content without deserializing from resopnse. 
             Console.WriteLine(response.Content);
         }
         [TestMethod]
