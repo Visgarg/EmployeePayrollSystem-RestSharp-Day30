@@ -122,5 +122,18 @@ namespace jsonServerMSTest
             //writing content without deserializing from resopnse.
             Console.WriteLine(response.Content);
         }
+        [TestMethod]
+        public void GivenEmployee_OnDelete_ShouldReturnSuccessStatus()
+        {
+            //request for deleting elements from json 
+            RestRequest request = new RestRequest("employees/10", Method.DELETE);
+            //executing request using rest client
+            IRestResponse response=client.Execute(request);
+            //console writeline will print null for response content after delete operation
+            Console.WriteLine(response.Content);
+            //checking status codes.
+            Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.OK);
     }
+    }
+   
 }
