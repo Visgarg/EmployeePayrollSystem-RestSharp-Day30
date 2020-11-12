@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonServer", "JsonServer\JsonServer.csproj", "{636B1302-C327-447E-B9DD-AC70B3D15972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonServerMSTest", "jsonServerMSTest\jsonServerMSTest.csproj", "{97584DB0-8625-4B19-9348-5618BEA48CE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{636B1302-C327-447E-B9DD-AC70B3D15972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636B1302-C327-447E-B9DD-AC70B3D15972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636B1302-C327-447E-B9DD-AC70B3D15972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636B1302-C327-447E-B9DD-AC70B3D15972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97584DB0-8625-4B19-9348-5618BEA48CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97584DB0-8625-4B19-9348-5618BEA48CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97584DB0-8625-4B19-9348-5618BEA48CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97584DB0-8625-4B19-9348-5618BEA48CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C3ED31B-4B7C-4A43-B1AD-365640E484F1}
+	EndGlobalSection
+EndGlobal
