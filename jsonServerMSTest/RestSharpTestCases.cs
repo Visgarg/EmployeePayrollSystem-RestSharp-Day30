@@ -4,6 +4,7 @@ using JsonServer;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
+using Newtonsoft.Json.Linq;
 
 namespace jsonServerMSTest
 {
@@ -55,6 +56,35 @@ namespace jsonServerMSTest
             }
             //assert for checking count of no of element in list to be equal to data in jsonserver table.
             Assert.AreEqual(4,dataResponse.Count);
+        }
+        /// <summary>
+        /// Givens the employee on post should return added employee. UC2
+        /// </summary>
+        [TestMethod]
+        public void givenEmployee_OnPost_ShouldReturnAddedEmployee()
+        {
+            //arrange
+            //adding request to post(add) data
+            RestRequest request = new RestRequest("/employees", Method.POST);
+            //instatiating jObject for adding data for name and salary, id auto increments
+            JObject jObject = new JObject();
+            jObject.Add("name", "Clark");
+            jObject.Add("salary", "150000");
+            //as parameters are passed as body hence "request body" call is made, in parameter type
+            request.AddParameter("application/json", jObject, ParameterType.RequestBody);
+            //Act
+            //request contains method of post and along with added parameter which contains data to be added
+            //hence response will contain the data which is added and not all the data from jsonserver.
+            //data is added to json server json file in this step.
+            IRestResponse response = client.Execute(request);
+            //assert
+            //code will be 201 for posting data
+            Assert.AreEqual(response.StatusCode, System.Net.HttpStatusCode.Created);
+            //derserializing object for assert and checking test case
+            Employee dataResponse = JsonConvert.DeserializeObject<Employee>(response.Content);
+            Assert.AreEqual("Clark", dataResponse.name);
+            Assert.AreEqual("150000", dataResponse.salary);
+            Console.WriteLine(response.Content);
         }
     }
 }
